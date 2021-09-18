@@ -1,0 +1,18 @@
+<form #f="ngForm" #aForm>
+	<div>
+		<label>First Name</label>
+   <input type="text" name="firstName" ngModel />
+  </div>
+  <div>
+    <label>Last Name</label>
+    <input type="text" name="lasttName" ngModel />   
+  </div>
+  <div>
+  <label>Address</label>
+    <input type="text" name="address" ngModel/>
+  </div>
+</form>
+<button (click)="setFocus('address')">set focus on address</button>
+<button (click)="setFocus('lasttName')">set focus on Last Name</button>
+<br/>
+{{ f.value | json }}
